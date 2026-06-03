@@ -7,10 +7,10 @@ import Logo from "../ui/Logo";
 
 
 const navLinks = [
-  { label: "Service", hasDropdown: true },
-  { label: "Agency", hasDropdown: true },
-  { label: "Case study", hasDropdown: true },
-  { label: "Resources", hasDropdown: true },
+  { label: "Service", hasDropdown: false },
+  { label: "Agency", hasDropdown: false },
+  { label: "Case study", hasDropdown: false },
+  { label: "Resources", hasDropdown: false },
   { label: "Contact", hasDropdown: false },
 ];
 
