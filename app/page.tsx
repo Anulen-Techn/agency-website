@@ -11,19 +11,15 @@ import ContactSection from "@/components/Home/ContactSection";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <FeaturedWork />
-        <ContactSection />
-        <Testimonials />
-        <FAQ />
-        <Insights />
-        <CTA />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Hero />
+      <About />
+      <FeaturedWork />
+      <ContactSection />
+      <Testimonials />
+      <FAQ />
+      <Insights />
+      <CTA />
+    </main>
   );
 }
