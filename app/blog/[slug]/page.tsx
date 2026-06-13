@@ -3,6 +3,37 @@ import Link from "next/link";
 import { ArrowLeft, Clock3 } from "lucide-react";
 import { blogContent } from "@/lib/blogContent";
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  const loadContent = blogContent[slug as keyof typeof blogContent];
+
+  if (!loadContent) {
+    return {
+      title: "Article Not Found | Anulen",
+    };
+  }
+
+  const { metadata } = await loadContent();
+
+  return {
+    title: metadata.title,
+    description: metadata.excerpt,
+
+    openGraph: {
+      title: metadata.title,
+      description: metadata.excerpt,
+      type: "article",
+    },
+
+    twitter: {
+      title: metadata.title,
+      description: metadata.excerpt,
+      card: "summary_large_image",
+    },
+  };
+}
+
 export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 

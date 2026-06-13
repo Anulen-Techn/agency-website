@@ -76,9 +76,7 @@ export default function Navbar() {
             Get started
           </Link>
 
-          <button className="hidden h-12 w-12 items-center justify-center rounded-full bg-black text-white transition hover:scale-105 sm:flex">
-            <Bell size={18} />
-          </button>
+         
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}
