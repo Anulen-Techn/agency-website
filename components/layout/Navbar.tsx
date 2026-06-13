@@ -17,10 +17,10 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { label: "Service", href: "/#services" },
-  { label: "Agency", href: "/#about" },
-  { label: "Case study", href: "/#case-study" },
-  { label: "Resources", href: "/#resources" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  // { label: "Case study", href: "/#case-study" },
+  // { label: "Resources", href: "/#resources" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/Contact" },
 ];
@@ -75,8 +75,6 @@ export default function Navbar() {
           >
             Get started
           </Link>
-
-         
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}

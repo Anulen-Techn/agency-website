@@ -6,7 +6,7 @@ import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen px-6 pb-16 pt-16 md:px-12 lg:px-20 lg:pt-18">
+    <section id="home" className="min-h-screen px-6 pb-16 pt-16 md:px-12 lg:px-20 lg:pt-18">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <AnimatedContainer>
           <h1 className="max-w-3xl text-[3.2rem] font-black leading-[0.98] tracking-[-0.065em] md:text-[5.4rem] lg:text-[5.7rem]">
