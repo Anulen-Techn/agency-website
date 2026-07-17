@@ -1,9 +1,7 @@
 import About from "@/components/Home/About";
 import CTA from "@/components/Home/CTA";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/Home/Hero";
-import Navbar from "@/components/layout/Navbar";
-import FeaturedWork from "@/components/Home/FeaturedWork";
+import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonials";
 import FAQ from "@/components/Home/FAQ";
 import Insights from "@/components/Home/Insights";
@@ -14,7 +12,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      {/* <FeaturedWork /> */}
+      <Services />
       <ContactSection />
       <Testimonials />
       <FAQ />

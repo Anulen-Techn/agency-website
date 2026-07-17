@@ -43,7 +43,16 @@ body {
 
 .font-black,
 .prose-headings\:font-black :is(:where(h1, h2, h3, h4, h5, h6):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
-  font-weight: 800;
+  font-weight: 600;
+}
+
+.font-bold,
+.prose strong {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 450;
 }
 
 main {
@@ -85,7 +94,7 @@ button {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #60a5fa;
 }
 
@@ -93,7 +102,7 @@ button {
   font-size: clamp(2.5rem, 4vw, 4.5rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -111,7 +120,7 @@ button {
   background: linear-gradient(135deg, #2563eb, #22d3ee);
   color: #fff;
   padding: 1rem 1.75rem;
-  font-weight: 700;
+  font-weight: 500;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,

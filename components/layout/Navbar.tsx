@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bell, ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "../ui/Logo";
+import { services } from "@/data/services";
 
 type NavDropdownItem = {
   label: string;
@@ -19,6 +20,14 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
+  {
+    label: "Services",
+    href: "/#services",
+    dropdown: services.map((service) => ({
+      label: service.shortTitle,
+      href: `/services/${service.slug}`,
+    })),
+  },
   // { label: "Case study", href: "/#case-study" },
   // { label: "Resources", href: "/#resources" },
   { label: "Blog", href: "/blog" },
@@ -45,7 +54,7 @@ export default function Navbar() {
 
             return (
               <div key={link.label} className="group relative">
-                <Link href={link.href} className="flex items-center gap-1 text-sm font-semibold text-black transition hover:text-[#589037]">
+                <Link href={link.href} className="flex items-center gap-1 text-sm font-[600] text-black transition hover:text-[#589037]">
                   {link.label}
                   {hasDropdown && <ChevronDown size={14} strokeWidth={2.5} className="transition group-hover:rotate-180" />}
                 </Link>
@@ -56,7 +65,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block rounded-full px-5 py-3 text-sm font-bold text-black transition hover:bg-[#f4f7ff] hover:text-[#589037]"
+                        className="block rounded-full px-5 py-3 text-sm font-[600] text-black transition hover:bg-[#f4f7ff] hover:text-[#589037]"
                       >
                         {item.label}
                       </Link>
@@ -98,7 +107,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={closeMobileMenu}
-                    className="flex flex-1 rounded-full px-5 py-4 text-sm font-bold hover:bg-[#f4f7ff] hover:text-[#589037]"
+                    className="flex flex-1 rounded-full px-5 py-4 text-sm font-[600] hover:bg-[#f4f7ff] hover:text-[#589037]"
                   >
                     {link.label}
                   </Link>
@@ -121,7 +130,7 @@ export default function Navbar() {
                         key={item.label}
                         href={item.href}
                         onClick={closeMobileMenu}
-                        className="block rounded-full px-5 py-3 text-sm font-semibold text-neutral-600 hover:bg-white hover:text-[#589037]"
+                        className="block rounded-full px-5 py-3 text-sm font-[600] text-neutral-600 hover:bg-white hover:text-[#589037]"
                       >
                         {item.label}
                       </Link>
