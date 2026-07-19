@@ -305,35 +305,26 @@ export default function QuotationGenerator() {
 
   return (
     <>
-      <section className="quotation-no-print px-6 pb-8 pt-8 dark:bg-black md:px-12 lg:px-20">
+      <section className="quotation-no-print px-6 pb-4 pt-4 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm font-bold text-[#589037]">Free Tool</p>
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-            <div>
-              <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl">Free Quotation Generator</h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
-                Create professional quotations for products and services, calculate totals automatically, save drafts, print and download your
-                quotation as a PDF.
-              </p>
-              <p className="mt-4 text-sm text-neutral-500 dark:text-neutral-300" aria-live="polite">
-                {saveState}
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <ActionButton onClick={saveDraft} icon={<Save size={17} />} label="Save draft" />
-              <ActionButton onClick={duplicateQuotation} icon={<Copy size={17} />} label="Duplicate" />
-              <ActionButton onClick={startNewQuotation} icon={<RotateCcw size={17} />} label="Start new" />
-              <ActionButton onClick={printQuotation} icon={<Printer size={17} />} label="Print quotation" />
-              <button
-                onClick={downloadPdf}
-                disabled={isGeneratingPdf}
-                className="inline-flex items-center gap-3 rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60 dark:bg-white dark:text-black"
-              >
-                <Download size={17} />
-                {isGeneratingPdf ? "Generating..." : "Download PDF"}
-              </button>
-              <ActionButton onClick={convertToInvoice} icon={<Send size={17} />} label="Convert to invoice" />
-            </div>
+          <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#589037]">Quotation Generator</p>
+          <div className="flex flex-wrap items-center gap-3 lg:justify-end">
+            <p className="mr-auto text-sm text-neutral-500 dark:text-neutral-300" aria-live="polite">
+              {saveState}
+            </p>
+            <ActionButton onClick={saveDraft} icon={<Save size={17} />} label="Save draft" />
+            <ActionButton onClick={duplicateQuotation} icon={<Copy size={17} />} label="Duplicate" />
+            <ActionButton onClick={startNewQuotation} icon={<RotateCcw size={17} />} label="Start new" />
+            <ActionButton onClick={printQuotation} icon={<Printer size={17} />} label="Print quotation" />
+            <button
+              onClick={downloadPdf}
+              disabled={isGeneratingPdf}
+              className="inline-flex items-center gap-3 rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60 dark:bg-white dark:text-black"
+            >
+              <Download size={17} />
+              {isGeneratingPdf ? "Generating..." : "Download PDF"}
+            </button>
+            <ActionButton onClick={convertToInvoice} icon={<Send size={17} />} label="Convert to invoice" />
           </div>
           {notice && (
             <div className="mt-6 flex max-w-3xl items-start gap-3 rounded-2xl border border-black/10 bg-[#f7f7f4] p-4 text-sm dark:border-white/10 dark:bg-white/10" role="status">
@@ -348,7 +339,7 @@ export default function QuotationGenerator() {
 
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
-          <div className="quotation-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+          <div className="quotation-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
             <Panel title="Business details">
               <div className="grid gap-4 md:grid-cols-2">
                 <TextField id="businessName" label="Business or company name" value={quotation.businessName} onChange={(value) => updateQuotation("businessName", value)} errors={errors} inputClass={inputClass} />
@@ -551,7 +542,7 @@ export default function QuotationGenerator() {
             </div>
           </div>
 
-          <div className="quotation-preview-scroll lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+          <div className="quotation-preview-scroll lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
             <div className="quotation-no-print mb-4 flex items-center gap-3 rounded-[1.5rem] bg-black p-5 text-white dark:bg-white dark:text-black">
               <FileText size={20} />
               <div>

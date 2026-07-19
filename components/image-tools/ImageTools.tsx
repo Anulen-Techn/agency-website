@@ -420,19 +420,9 @@ export default function ImageTools({
 
   return (
     <>
-      <section className="image-tools-no-print px-6 pb-8 pt-8 dark:bg-black md:px-12 lg:px-20">
+      <section className="image-tools-no-print px-6 pb-4 pt-4 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm font-bold text-[#589037]">Free Tool</p>
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end">
-            <div>
-              <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl">{title}</h1>
-              <p className="mt-7 max-w-3xl text-base leading-8 text-neutral-500 dark:text-neutral-300">{description}</p>
-            </div>
-            <div className="rounded-[1.5rem] border border-black/10 bg-[#f7f7f4] p-5 text-sm leading-7 text-neutral-600 dark:border-white/10 dark:bg-white/10 dark:text-neutral-300">
-              <p className="font-bold text-black dark:text-white">Privacy notice</p>
-              <p className="mt-2">Your images are processed in your browser and are not uploaded to Anulen&apos;s servers.</p>
-            </div>
-          </div>
+          <p className="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#589037]">{title.replace(/^Free\s+/, "")}</p>
         </div>
       </section>
 
@@ -460,7 +450,7 @@ export default function ImageTools({
           )}
 
           <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
-            <div className="image-tools-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+            <div className="image-tools-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
               <label
                 onDragOver={(event) => event.preventDefault()}
                 onDrop={onDrop}
@@ -515,7 +505,7 @@ export default function ImageTools({
               <input ref={backgroundInputRef} type="file" accept="image/png,image/jpeg,image/webp" className="sr-only" onChange={onBackgroundImageChange} />
             </div>
 
-            <div className="image-tools-preview-scroll lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+            <div className="image-tools-preview-scroll lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
               <div className="rounded-[2rem] bg-[#f7f7f4] p-4 dark:bg-white/10 md:p-6">
                 <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
                   <div>

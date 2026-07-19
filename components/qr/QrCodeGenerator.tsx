@@ -295,26 +295,18 @@ export default function QrCodeGenerator() {
 
   return (
     <>
-      <section className="qr-no-print px-6 pb-8 pt-8 dark:bg-black md:px-12 lg:px-20">
+      <section className="qr-no-print px-6 pb-4 pt-4 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm font-bold text-[#589037]">Free Tool</p>
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-            <div>
-              <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl">Free QR Code Generator</h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
-                Create custom QR codes for websites, Wi-Fi, WhatsApp, email, contact cards, text and more. Customise and download as PNG or SVG.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <button onClick={saveCurrent} className="inline-flex items-center gap-3 rounded-full border border-black px-5 py-3 text-sm font-bold transition hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
-                <Check size={17} />
-                Save QR
-              </button>
-              <button onClick={reset} className="inline-flex items-center gap-3 rounded-full border border-black/20 px-5 py-3 text-sm font-bold transition hover:border-red-600 hover:text-red-600 dark:border-white/30">
-                <RotateCcw size={17} />
-                Reset
-              </button>
-            </div>
+          <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#589037]">QR Generator</p>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
+            <button onClick={saveCurrent} className="inline-flex items-center gap-3 rounded-full border border-black px-5 py-3 text-sm font-bold transition hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
+              <Check size={17} />
+              Save QR
+            </button>
+            <button onClick={reset} className="inline-flex items-center gap-3 rounded-full border border-black/20 px-5 py-3 text-sm font-bold transition hover:border-red-600 hover:text-red-600 dark:border-white/30">
+              <RotateCcw size={17} />
+              Reset
+            </button>
           </div>
           {notice && (
             <div className="mt-6 flex max-w-3xl items-start gap-3 rounded-2xl border border-black/10 bg-[#f7f7f4] p-4 text-sm dark:border-white/10 dark:bg-white/10" role="status" aria-live="polite">
@@ -329,7 +321,7 @@ export default function QrCodeGenerator() {
 
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
-          <div className="qr-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+          <div className="qr-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
             <Panel title="QR content">
               <div className="grid gap-4">
                 <SelectField id="qrType" label="QR-code type" value={qrType} onChange={(value) => setQrType(value as QrType)} options={qrTypes.map((item) => item.label)} optionValues={qrTypes.map((item) => item.value)} />
@@ -427,7 +419,7 @@ export default function QrCodeGenerator() {
             </div>
           </div>
 
-          <div className="qr-preview-scroll lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
+          <div className="qr-preview-scroll lg:sticky lg:top-24 lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
             <div className="rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6">
               <div className="qr-print-card rounded-[2rem] border border-black/5 bg-white p-6 text-black dark:border-white/10">
                 <div className="mb-5">
