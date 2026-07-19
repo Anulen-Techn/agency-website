@@ -80,7 +80,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/Contact"
+            href="/#contact"
             className="hidden rounded-full border border-black px-7 py-3 text-sm font-bold transition hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black sm:inline-flex"
           >
             Get started
@@ -145,7 +145,7 @@ export default function Navbar() {
           })}
 
           <Link
-            href="/Contact"
+            href="/#contact"
             onClick={closeMobileMenu}
             className="mt-3 flex justify-center rounded-full bg-black px-7 py-4 text-sm font-bold text-white dark:bg-white dark:text-black"
           >

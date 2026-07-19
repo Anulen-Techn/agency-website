@@ -1,7 +1,9 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
+
+const calendlyUrl = "https://calendly.com/anulenofficial";
 
 export default function ContactForm() {
   return (
@@ -23,6 +25,16 @@ export default function ContactForm() {
               <p>✓ CRM tools and dashboards</p>
               <p>✓ Automation systems</p>
             </div>
+
+            <a
+              href={calendlyUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-10 inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-bold text-black transition hover:scale-[1.03]"
+            >
+              Book a call
+              <CalendarDays size={18} />
+            </a>
           </div>
         </AnimatedContainer>
 
