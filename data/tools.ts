@@ -8,6 +8,38 @@ export type Tool = {
 
 export const tools: Tool[] = [
   {
+    title: "Background Remover",
+    href: "/background-remover",
+    eyebrow: "Free image tool",
+    description:
+      "Remove plain image backgrounds, preserve internal details, replace backgrounds, and download transparent PNG files in your browser.",
+    status: "Available now",
+  },
+  {
+    title: "Image Compressor",
+    href: "/image-compressor",
+    eyebrow: "Free image tool",
+    description:
+      "Compress images, resize photos, strip metadata, and download optimised JPG, PNG or WebP files in your browser.",
+    status: "Available now",
+  },
+  {
+    title: "Profit Calculator",
+    href: "/profit-calculator",
+    eyebrow: "Free finance tool",
+    description:
+      "Calculate profit, margin, markup, ROI, target selling price, break-even quantity, and compare pricing scenarios in your browser.",
+    status: "Available now",
+  },
+  {
+    title: "QR Code Generator",
+    href: "/qr-code-generator",
+    eyebrow: "Free utility tool",
+    description:
+      "Create custom QR codes for websites, Wi-Fi, WhatsApp, email, contact cards, locations, events, payments, and more.",
+    status: "Available now",
+  },
+  {
     title: "WhatsApp Link Generator",
     href: "/whatsapp-link-generator",
     eyebrow: "Free marketing tool",

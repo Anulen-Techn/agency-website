@@ -274,13 +274,17 @@ button {
   .invoice-no-print,
   .quotation-no-print,
   .receipt-no-print,
-  .whatsapp-no-print {
+  .whatsapp-no-print,
+  .qr-no-print,
+  .profit-no-print,
+  .image-tools-no-print {
     display: none !important;
   }
 
   .invoice-print-area,
   .quotation-print-area,
-  .receipt-print-area {
+  .receipt-print-area,
+  .profit-print-area {
     width: 100% !important;
     max-width: none !important;
     min-height: auto !important;
@@ -313,6 +317,27 @@ button {
   }
 
   .whatsapp-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .qr-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .profit-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .image-tools-preview-scroll {
     position: static !important;
     max-height: none !important;
     overflow: visible !important;
