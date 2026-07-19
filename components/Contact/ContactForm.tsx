@@ -6,7 +6,7 @@ import AnimatedContainer from "@/components/ui/AnimatedContainer";
 export default function ContactForm() {
   return (
     <section className="px-3 py-4">
-      <div className="mx-auto grid max-w-7xl gap-6 rounded-[2rem] bg-white p-6 md:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:p-14">
+      <div className="mx-auto grid max-w-7xl gap-6 rounded-[2rem] bg-white p-6 md:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:p-14 dark:bg-black">
         <AnimatedContainer>
           <div className="rounded-[2rem] bg-[#03070b] p-8 text-white lg:min-h-full">
             <p className="mb-4 text-sm font-bold text-[#9bff63]">Start here</p>
@@ -34,7 +34,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]"
+                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white dark:placeholder:text-neutral-500"
                 />
               </div>
 
@@ -43,7 +43,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]"
+                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white dark:placeholder:text-neutral-500"
                 />
               </div>
             </div>
@@ -54,13 +54,13 @@ export default function ContactForm() {
                 <input
                   type="tel"
                   placeholder="+234..."
-                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]"
+                  className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white dark:placeholder:text-neutral-500"
                 />
               </div>
 
               <div>
                 <label className="mb-2 block text-sm font-bold">Project type</label>
-                <select className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]">
+                <select className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white">
                   <option>Website Development</option>
                   <option>E-commerce Development</option>
                   <option>CRM Development</option>
@@ -72,7 +72,7 @@ export default function ContactForm() {
 
             <div>
               <label className="mb-2 block text-sm font-bold">Project budget</label>
-              <select className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]">
+              <select className="w-full rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white">
                 <option>Select a budget range</option>
                 <option>₦100,000 - ₦300,000</option>
                 <option>₦300,000 - ₦700,000</option>
@@ -86,13 +86,13 @@ export default function ContactForm() {
               <textarea
                 rows={6}
                 placeholder="What do you want to build?"
-                className="w-full resize-none rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff]"
+                className="w-full resize-none rounded-2xl border border-black/10 bg-[#f7f7f4] px-5 py-4 text-sm outline-none focus:border-[#2f80ff] dark:border-white/10 dark:bg-black dark:text-white dark:placeholder:text-neutral-500"
               />
             </div>
 
             <button
               type="submit"
-              className="inline-flex w-fit items-center gap-4 rounded-full bg-black px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.03]"
+              className="inline-flex w-fit items-center gap-4 rounded-full bg-black px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.03] dark:bg-white dark:text-black"
             >
               Send message
               <ArrowRight size={18} />

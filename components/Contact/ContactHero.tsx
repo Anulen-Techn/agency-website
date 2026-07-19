@@ -4,7 +4,7 @@ import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
 export default function ContactHero() {
   return (
-    <section className="px-6 pb-4 pt-8 md:px-12 lg:px-20">
+    <section className="px-6 pb-4 pt-8 dark:bg-black md:px-12 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <AnimatedContainer>
           <p className="mb-5 text-sm font-bold text-[#589037]">Contact Anulen</p>
@@ -13,7 +13,7 @@ export default function ContactHero() {
             Let’s talk about the website, system, or platform you want to build.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-500">
+          <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
             Tell us about your business, your goals, and what you need. We’ll help you understand the best way to design, build, and launch it.
           </p>
         </AnimatedContainer>

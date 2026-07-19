@@ -28,14 +28,14 @@ export default function ContactFAQ() {
 
   return (
     <section className="px-3 py-8">
-      <div className="mx-auto max-w-7xl rounded-[2rem] bg-white px-6 py-14 md:px-14">
+      <div className="mx-auto max-w-7xl rounded-[2rem] bg-white px-6 py-14 md:px-14 dark:bg-black">
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
           <AnimatedContainer>
             <p className="mb-4 text-sm font-bold text-[#589037]">Contact FAQs</p>
 
             <h2 className="text-4xl font-black tracking-[-0.05em] md:text-5xl">Before you send a message.</h2>
 
-            <p className="mt-6 max-w-md text-sm leading-7 text-neutral-500">
+            <p className="mt-6 max-w-md text-sm leading-7 text-neutral-500 dark:text-neutral-300">
               These answers help you know what to expect when reaching out to Anulen.
             </p>
           </AnimatedContainer>
@@ -45,7 +45,7 @@ export default function ContactFAQ() {
               const isOpen = openIndex === index;
 
               return (
-                <div key={faq.q} className="border-t border-black py-6 last:border-b">
+                <div key={faq.q} className="border-t border-black py-6 last:border-b dark:border-white/20">
                   <button onClick={() => setOpenIndex(isOpen ? -1 : index)} className="flex w-full items-start justify-between gap-8 text-left">
                     <h3 className="text-xl font-black tracking-[-0.04em]">{faq.q}</h3>
 
@@ -58,7 +58,7 @@ export default function ContactFAQ() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-500">{faq.a}</p>
+                      <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-500 dark:text-neutral-300">{faq.a}</p>
                     </div>
                   </div>
                 </div>

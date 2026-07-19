@@ -10,9 +10,9 @@ export default function Button({
   variant?: "dark" | "light" | "outline";
 }) {
   const styles = {
-    dark: "bg-black text-white hover:scale-[1.03]",
+    dark: "bg-black text-white hover:scale-[1.03] dark:bg-white dark:text-black",
     light: "bg-white text-black hover:scale-[1.03]",
-    outline: "border border-black text-black hover:bg-black hover:text-white",
+    outline: "border border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black",
   };
 
   return (

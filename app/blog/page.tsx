@@ -4,8 +4,8 @@ import { blogPosts } from "@/data/blogPosts";
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-white text-black">
-      <section className="px-6 pb-20 pt-36 md:px-12 lg:px-20">
+    <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
+      <section className="px-6 pb-20 pt-36 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <p className="mb-4 text-sm font-bold text-[#589037]">Anulen Blog</p>
 
@@ -13,7 +13,7 @@ export default function BlogPage() {
             Insights for better websites, systems, and digital growth.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-500">
+          <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
             Practical articles for business owners who want stronger websites, better user experience, and smarter digital systems.
           </p>
 

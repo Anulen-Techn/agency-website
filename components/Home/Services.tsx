@@ -16,7 +16,7 @@ const iconMap = {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white px-6 py-24 md:px-12 lg:px-20">
+    <section id="services" className="bg-white px-6 py-24 md:px-12 lg:px-20 dark:bg-black">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1fr] lg:items-end">
           <AnimatedContainer>
@@ -27,7 +27,7 @@ export default function Services() {
           </AnimatedContainer>
 
           <AnimatedContainer delay={0.1}>
-            <p className="max-w-xl text-base leading-8 text-neutral-500">
+            <p className="max-w-xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
               From polished websites to automation and internal systems, Anulen helps businesses create clearer customer experiences and smoother
               operations.
             </p>
@@ -42,24 +42,24 @@ export default function Services() {
               <AnimatedContainer
                 key={service.slug}
                 delay={index * 0.05}
-                className="group flex min-h-[320px] flex-col rounded-[1.75rem] border border-black/5 bg-[#f7f7f4] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                className="group flex min-h-[320px] flex-col rounded-[1.75rem] border border-black/5 bg-[#f7f7f4] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl dark:border-white/10 dark:bg-black dark:hover:bg-black"
               >
                 <div className="flex items-start justify-between gap-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#589037] shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#589037] shadow-sm dark:bg-white/10">
                     <Icon size={22} />
                   </div>
 
-                  <span className="text-sm text-neutral-400">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-sm text-neutral-400 dark:text-neutral-500">{String(index + 1).padStart(2, "0")}</span>
                 </div>
 
                 <div className="mt-10 flex flex-1 flex-col">
                   <p className="mb-3 text-xs font-bold uppercase tracking-wider text-[#589037]">{service.eyebrow}</p>
                   <h3 className="text-2xl font-black leading-tight tracking-[-0.04em]">{service.title}</h3>
-                  <p className="mt-5 text-sm leading-7 text-neutral-500">{service.excerpt}</p>
+                  <p className="mt-5 text-sm leading-7 text-neutral-500 dark:text-neutral-300">{service.excerpt}</p>
 
                   <Link
                     href={`/services/${service.slug}`}
-                    className="mt-auto inline-flex w-fit items-center gap-3 border-b border-black pt-8 text-sm font-bold transition group-hover:text-[#589037]"
+                    className="mt-auto inline-flex w-fit items-center gap-3 border-b border-black pt-8 text-sm font-bold transition group-hover:text-[#589037] dark:border-white"
                   >
                     Learn more
                     <ArrowRight size={16} />

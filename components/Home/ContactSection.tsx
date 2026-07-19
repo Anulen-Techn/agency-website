@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-[#f7f7f4] px-3 py-8">
+    <section id="contact" className="bg-[#f7f7f4] px-3 py-8 dark:bg-black">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#03070b] px-6 py-16 text-white md:px-12 lg:px-14">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <AnimatedContainer>

@@ -16,19 +16,19 @@ export default function Testimonials() {
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-8">
           <div className="flex items-center gap-5">
-            <div className="h-16 w-16 rounded-full bg-neutral-300" />
+            <div className="h-16 w-16 rounded-full bg-neutral-300 dark:bg-white/20" />
             <div>
               <h4 className="font-black">Michael Kaizer</h4>
-              <p className="text-sm text-neutral-500">CEO of Basecamp Corp</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-300">CEO of Basecamp Corp</p>
             </div>
           </div>
 
           <div className="flex items-center gap-6">
-            <button className="flex h-12 w-16 items-center justify-center rounded-full border border-black">
+            <button className="flex h-12 w-16 items-center justify-center rounded-full border border-black dark:border-white">
               <ArrowLeft size={18} />
             </button>
             <span className="text-sm font-bold">01/05</span>
-            <button className="flex h-12 w-16 items-center justify-center rounded-full bg-black text-white">
+            <button className="flex h-12 w-16 items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black">
               <ArrowRight size={18} />
             </button>
           </div>

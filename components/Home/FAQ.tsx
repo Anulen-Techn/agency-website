@@ -36,21 +36,21 @@ export default function FAQ() {
 
   return (
     <section className="px-3 py-8">
-      <div className="rounded-[2rem] bg-white px-6 py-14 md:px-14">
+      <div className="rounded-[2rem] bg-white px-6 py-14 md:px-14 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <AnimatedContainer>
             <h2 className="text-4xl font-black tracking-[-0.05em] md:text-5xl">Anulen FAQs</h2>
 
-            <p className="mt-6 max-w-md text-sm leading-7 text-neutral-500">
+            <p className="mt-6 max-w-md text-sm leading-7 text-neutral-500 dark:text-neutral-300">
               Common questions about websites, software, SEO, business systems, and working with Anulen.
             </p>
 
             <div className="mt-10 flex items-center gap-8">
-              <button className="rounded-full border border-black px-7 py-4 text-sm font-bold transition hover:bg-black hover:text-white">
+              <button className="rounded-full border border-black px-7 py-4 text-sm font-bold transition hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                 More Questions
               </button>
 
-              <a href="#contact" className="border-b border-black text-sm font-bold">
+              <a href="#contact" className="border-b border-black text-sm font-bold dark:border-white">
                 Contact Us
               </a>
             </div>
@@ -61,7 +61,7 @@ export default function FAQ() {
               const isOpen = openIndex === index;
 
               return (
-                <div key={faq.q} className="border-t border-black py-6 last:border-b">
+                <div key={faq.q} className="border-t border-black py-6 last:border-b dark:border-white/20">
                   <button onClick={() => setOpenIndex(isOpen ? -1 : index)} className="flex w-full items-start justify-between gap-8 text-left">
                     <h3 className="text-xl font-black tracking-[-0.04em]">{faq.q}</h3>
 
@@ -74,7 +74,7 @@ export default function FAQ() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-500">{faq.a}</p>
+                      <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-500 dark:text-neutral-300">{faq.a}</p>
                     </div>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ThemeScript from "@/components/theme/ThemeScript";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({
@@ -81,8 +82,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <ThemeScript />
         <Navbar />
         {children}
         <Footer />

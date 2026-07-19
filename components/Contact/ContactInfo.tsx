@@ -39,14 +39,14 @@ export default function ContactInfo() {
             const Icon = item.icon;
 
             return (
-              <AnimatedContainer key={item.title} delay={index * 0.06} className="rounded-[2rem] bg-white p-7 shadow-sm">
-                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#eefff2] text-[#589037]">
+              <AnimatedContainer key={item.title} delay={index * 0.06} className="rounded-[2rem] bg-white p-7 shadow-sm dark:bg-black">
+                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#eefff2] text-[#589037] dark:bg-white/10">
                   <Icon size={22} />
                 </div>
 
                 <h3 className="text-xl font-black tracking-[-0.04em]">{item.title}</h3>
 
-                <p className="mt-4 text-sm leading-6 text-neutral-500">{item.text}</p>
+                <p className="mt-4 text-sm leading-6 text-neutral-500 dark:text-neutral-300">{item.text}</p>
               </AnimatedContainer>
             );
           })}

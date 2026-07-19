@@ -55,10 +55,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const Icon = iconMap[service.icon];
 
   return (
-    <main className="min-h-screen bg-white text-black">
-      <section className="px-6 pb-24 pt-36 md:px-12 lg:px-20">
+    <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
+      <section className="px-6 pb-24 pt-36 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
-          <Link href="/#services" className="inline-flex items-center gap-3 text-sm font-semibold text-neutral-500 transition hover:text-black">
+          <Link href="/#services" className="inline-flex items-center gap-3 text-sm font-semibold text-neutral-500 transition hover:text-black dark:text-neutral-300 dark:hover:text-white">
             <ArrowLeft size={16} />
             Back to services
           </Link>
@@ -67,7 +67,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div>
               <p className="mb-5 text-sm font-bold text-[#589037]">{service.eyebrow}</p>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.06em] md:text-7xl">{service.title}</h1>
-              <p className="mt-8 max-w-3xl text-lg leading-9 text-neutral-500">{service.description}</p>
+              <p className="mt-8 max-w-3xl text-lg leading-9 text-neutral-500 dark:text-neutral-300">{service.description}</p>
             </div>
 
             <div className="rounded-[2rem] bg-[#03070b] p-8 text-white">
@@ -90,8 +90,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      <section className="bg-[#f7f7f4] px-3 py-8">
-        <div className="mx-auto grid max-w-7xl gap-6 rounded-[2rem] bg-white px-6 py-16 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-14">
+      <section className="bg-[#f7f7f4] px-3 py-8 dark:bg-black">
+        <div className="mx-auto grid max-w-7xl gap-6 rounded-[2rem] bg-white px-6 py-16 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-14 dark:bg-black">
           <div>
             <p className="mb-4 text-sm font-bold text-[#589037]">How we approach it</p>
             <h2 className="max-w-xl text-4xl font-black leading-tight tracking-[-0.05em] md:text-5xl">A focused process from idea to launch.</h2>
@@ -99,9 +99,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <div className="grid gap-4">
             {service.process.map((step, index) => (
-              <div key={step} className="grid gap-5 rounded-[1.5rem] bg-[#f7f7f4] p-6 md:grid-cols-[4rem_1fr]">
+              <div key={step} className="grid gap-5 rounded-[1.5rem] bg-[#f7f7f4] p-6 md:grid-cols-[4rem_1fr] dark:bg-black">
                 <span className="text-3xl font-black tracking-[-0.04em] text-[#589037]">{String(index + 1).padStart(2, "0")}</span>
-                <p className="text-base leading-8 text-neutral-600">{step}</p>
+                <p className="text-base leading-8 text-neutral-600 dark:text-neutral-300">{step}</p>
               </div>
             ))}
           </div>
@@ -117,7 +117,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <div className="grid gap-6">
             {service.details.map((detail) => (
-              <p key={detail} className="border-l border-black/10 pl-6 text-lg leading-9 text-neutral-600">
+              <p key={detail} className="border-l border-black/10 pl-6 text-lg leading-9 text-neutral-600 dark:border-white/10 dark:text-neutral-300">
                 {detail}
               </p>
             ))}

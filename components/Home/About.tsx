@@ -41,8 +41,8 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#f7f7f4] px-3 py-8">
-      <div className="mx-auto max-w-7xl rounded-[2rem] bg-white px-6 py-16 md:px-12 lg:px-14">
+    <section id="about" className="bg-[#f7f7f4] px-3 py-8 dark:bg-black">
+      <div className="mx-auto max-w-7xl rounded-[2rem] bg-white px-6 py-16 md:px-12 lg:px-14 dark:bg-black">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <AnimatedContainer>
             <p className="mb-4 text-sm font-bold text-[#589037]">About Anulen</p>
@@ -51,7 +51,7 @@ export default function About() {
               We don’t just build websites. We build business systems that create trust.
             </h2>
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-500">
+            <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-500 dark:text-neutral-300">
               Anulen is a modern digital agency helping businesses turn ideas into polished websites, e-commerce platforms, CRM tools, and automation
               systems. Every project is built around clarity, performance, strong design, and real business outcomes.
             </p>
@@ -59,13 +59,13 @@ export default function About() {
             <div className="mt-9 flex flex-wrap items-center gap-5">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-4 rounded-full bg-black px-7 py-4 text-sm font-bold text-white transition hover:scale-[1.03]"
+                className="inline-flex items-center gap-4 rounded-full bg-black px-7 py-4 text-sm font-bold text-white transition hover:scale-[1.03] dark:bg-white dark:text-black"
               >
                 Work with us
                 <ArrowRight size={18} />
               </a>
 
-              <a href="#case-study" className="border-b border-black text-sm font-bold">
+              <a href="#case-study" className="border-b border-black text-sm font-bold dark:border-white">
                 View our work
               </a>
             </div>
@@ -111,15 +111,15 @@ export default function About() {
               <AnimatedContainer
                 key={card.title}
                 delay={index * 0.06}
-                className="rounded-[2rem] border border-black/5 bg-[#f7f7f4] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+                className="rounded-[2rem] border border-black/5 bg-[#f7f7f4] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-xl dark:border-white/10 dark:bg-black dark:hover:bg-black"
               >
-                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#589037]">
+                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#589037] dark:bg-white/10">
                   <Icon size={22} />
                 </div>
 
                 <h3 className="text-xl font-black tracking-[-0.04em]">{card.title}</h3>
 
-                <p className="mt-4 text-sm leading-6 text-neutral-500">{card.desc}</p>
+                <p className="mt-4 text-sm leading-6 text-neutral-500 dark:text-neutral-300">{card.desc}</p>
               </AnimatedContainer>
             );
           })}
