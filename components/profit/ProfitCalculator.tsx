@@ -7,6 +7,8 @@ import type { CurrencyCode } from "@/lib/invoice/types";
 import { calculateProfit } from "@/lib/profit/calculations";
 import { clearProfitScenarios, loadLatestProfitInput, loadProfitScenarios, saveLatestProfitInput, saveProfitScenarios } from "@/lib/profit/storage";
 import type { ProfitInput, ProfitMode, ProfitScenario } from "@/lib/profit/types";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const modes: Array<{ value: ProfitMode; label: string }> = [
   { value: "basic", label: "Basic Profit Calculator" },
@@ -160,6 +162,8 @@ Currency: ${input.currency}`;
           )}
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
 
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
@@ -321,6 +325,8 @@ Currency: ${input.currency}`;
           </div>
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
     </>
   );
 }

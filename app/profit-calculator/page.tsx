@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProfitCalculator from "@/components/profit/ProfitCalculator";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 export const metadata: Metadata = {
   title: "Free Profit Calculator | Anulen Technologies",
@@ -108,6 +110,8 @@ export default function ProfitCalculatorPage() {
               ))}
             </div>
           </div>
+
+          <AdSenseAd slot={ADSENSE_SLOTS.bottom} className="px-0 md:px-0 lg:px-0" />
 
           <div className="mt-20">
             <p className="mb-4 text-sm font-bold text-[#589037]">FAQ</p>

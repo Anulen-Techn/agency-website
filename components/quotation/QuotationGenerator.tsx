@@ -14,6 +14,8 @@ import type { DepositType, QuotationData, QuotationItem, QuotationStatus, Quotat
 import type { CurrencyCode, DiscountType } from "@/lib/invoice/types";
 import { invoiceDraftKey, saveInvoiceDraft } from "@/lib/invoice/storage";
 import { validateQuotation } from "@/lib/quotation/validation";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const maxLogoSize = 2_000_000;
 const accentColors = [
@@ -342,6 +344,8 @@ export default function QuotationGenerator() {
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
+
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
           <div className="quotation-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
@@ -559,6 +563,8 @@ export default function QuotationGenerator() {
           </div>
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
     </>
   );
 }

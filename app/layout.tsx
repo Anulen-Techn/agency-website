@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ThemeScript from "@/components/theme/ThemeScript";
+import { GOOGLE_ADSENSE_ID } from "@/lib/adsense";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({
@@ -42,6 +43,10 @@ export const metadata: Metadata = {
 
   creator: "Anulen",
   publisher: "Anulen",
+
+  other: {
+    "google-adsense-account": GOOGLE_ADSENSE_ID,
+  },
 
   openGraph: {
     title: "Anulen | Websites, Automation & Business Systems",
@@ -87,6 +92,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Script
+          id="google-adsense"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_ID}`}
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`

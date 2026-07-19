@@ -14,6 +14,8 @@ import { receiptDraftKey, saveReceiptDraft } from "@/lib/receipt/storage";
 import type { AccentColor, DiscountType, InvoiceData, InvoiceItem, InvoiceTemplate, PaymentStatus, ValidationErrors } from "@/lib/invoice/types";
 import { generateInvoiceNumber } from "@/lib/invoice/invoiceNumber";
 import { validateInvoice } from "@/lib/invoice/validation";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const maxLogoSize = 1_000_000;
 
@@ -362,6 +364,8 @@ export default function InvoiceGenerator() {
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
+
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
           <div className="invoice-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
@@ -549,6 +553,8 @@ export default function InvoiceGenerator() {
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
+
       <section className="invoice-no-print px-6 pb-24 pt-10 dark:bg-black md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1fr]">
@@ -573,6 +579,8 @@ export default function InvoiceGenerator() {
               ))}
             </div>
           </div>
+
+          <AdSenseAd slot={ADSENSE_SLOTS.bottom} className="px-0 md:px-0 lg:px-0" />
 
           <div className="mt-20">
             <p className="mb-4 text-sm font-bold text-[#589037]">FAQ</p>

@@ -12,6 +12,8 @@ import { clearReceiptDraft, loadReceiptDraft, saveReceiptDraft } from "@/lib/rec
 import { validateReceipt } from "@/lib/receipt/validation";
 import type { ReceiptData, ReceiptItem, ReceiptMethod, ReceiptStatus, ReceiptTemplate, ReceiptValidationErrors } from "@/lib/receipt/types";
 import type { CurrencyCode, DiscountType } from "@/lib/invoice/types";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const maxLogoSize = 2_000_000;
 const units = ["Item", "Piece", "Service", "Hour", "Day", "Package", "Kilogram", "Month", "Custom"];
@@ -346,6 +348,8 @@ export default function ReceiptGenerator() {
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
+
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
           <div className="receipt-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
@@ -587,6 +591,8 @@ export default function ReceiptGenerator() {
           </div>
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
     </>
   );
 }

@@ -18,6 +18,8 @@ import {
 } from "@/lib/image-tools/processing";
 import { loadImageToolPreferences, saveImageToolPreferences } from "@/lib/image-tools/storage";
 import type { BackgroundSettings, CompressionSettings, ImageDimensions, ImageToolTab, OutputFormat, PlainRemovalScope, ProcessedImageResult, ReplacementMode } from "@/lib/image-tools/types";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const defaultCompression: CompressionSettings = {
   quality: 0.78,
@@ -434,6 +436,8 @@ export default function ImageTools({
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
+
       <section className="px-3 pb-16 dark:bg-black">
         <div className="mx-auto max-w-7xl">
           {showTabs && (
@@ -603,6 +607,8 @@ export default function ImageTools({
           </div>
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
     </>
   );
 }

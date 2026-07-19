@@ -277,7 +277,11 @@ button {
   .whatsapp-no-print,
   .qr-no-print,
   .profit-no-print,
-  .image-tools-no-print {
+  .image-tools-no-print,
+  .adsbygoogle,
+  .ad-container,
+  .no-print,
+  [aria-label="Advertisement"] {
     display: none !important;
   }
 

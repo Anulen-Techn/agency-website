@@ -7,6 +7,8 @@ import { generateWhatsAppLink, linkDisplayFormats, normalizeInternationalNumber,
 import { addWhatsAppHistoryEntry, clearWhatsAppHistory, loadWhatsAppHistory, saveWhatsAppHistory } from "@/lib/whatsapp/storage";
 import { whatsappTemplates } from "@/lib/whatsapp/templates";
 import type { RecentWhatsAppLink } from "@/lib/whatsapp/types";
+import AdSenseAd from "@/components/ads/AdSenseAd";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
 
 const defaultCountry = countryCodes[0];
 const placeholderNames = ["name", "product", "service", "order_number", "date", "business_name"];
@@ -316,6 +318,8 @@ export default function WhatsAppLinkGenerator() {
         </div>
       </section>
 
+      <AdSenseAd slot={ADSENSE_SLOTS.top} />
+
       <section className="px-3 pb-10 dark:bg-black">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-start">
           <div className="whatsapp-no-print grid gap-5 rounded-[2rem] bg-white p-4 shadow-sm dark:bg-black md:p-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-3 lg:[scrollbar-gutter:stable]">
@@ -579,6 +583,8 @@ export default function WhatsAppLinkGenerator() {
           </div>
         </div>
       </section>
+
+      <AdSenseAd slot={ADSENSE_SLOTS.middle} />
     </>
   );
 }
