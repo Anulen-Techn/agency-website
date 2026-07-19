@@ -254,3 +254,81 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body,
+  main {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0 !important;
+  }
+
+  body > header,
+  body > footer,
+  .invoice-no-print,
+  .quotation-no-print,
+  .receipt-no-print,
+  .whatsapp-no-print {
+    display: none !important;
+  }
+
+  .invoice-print-area,
+  .quotation-print-area,
+  .receipt-print-area {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-inside: auto;
+  }
+
+  .invoice-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .quotation-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .receipt-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .whatsapp-preview-scroll {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .invoice-print-area table,
+  .quotation-print-area table,
+  .receipt-print-area table {
+    page-break-inside: auto;
+  }
+
+  .invoice-print-area tr,
+  .quotation-print-area tr,
+  .receipt-print-area tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
