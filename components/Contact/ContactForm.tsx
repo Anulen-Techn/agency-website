@@ -3,7 +3,7 @@
 import { ArrowRight, CalendarDays } from "lucide-react";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
-const calendlyUrl = "https://calendly.com/anulenofficial";
+const bookingUrl = "https://calendar.app.google/zK9Z5CjWSfHuzTfD9";
 
 export default function ContactForm() {
   return (
@@ -27,7 +27,7 @@ export default function ContactForm() {
             </div>
 
             <a
-              href={calendlyUrl}
+              href={bookingUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-10 inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-bold text-black transition hover:scale-[1.03]"

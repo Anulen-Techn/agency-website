@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
+const bookingUrl = "https://calendar.app.google/zK9Z5CjWSfHuzTfD9";
+
 const aboutCards = [
   {
     title: "Strategy",
@@ -58,7 +60,9 @@ export default function About() {
 
             <div className="mt-9 flex flex-wrap items-center gap-5">
               <a
-                href="#contact"
+                href={bookingUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-4 rounded-full bg-black px-7 py-4 text-sm font-bold text-white transition hover:scale-[1.03] dark:bg-white dark:text-black"
               >
                 Work with us

@@ -4,6 +4,8 @@ import { TrendingUp } from "lucide-react";
 import Button from "@/components/ui/Button";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
+const bookingUrl = "https://calendar.app.google/zK9Z5CjWSfHuzTfD9";
+
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen px-6 pb-16 pt-16 dark:scroll-mt-32 dark:bg-black md:px-12 lg:px-20 lg:pt-18">
@@ -18,7 +20,9 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-9">
-            <Button>Schedule Call</Button>
+            <Button href={bookingUrl} target="_blank" rel="noreferrer">
+              Schedule Call
+            </Button>
             <a href="#case-study" className="border-b border-black text-sm font-bold dark:border-white">
               View Case Study
             </a>

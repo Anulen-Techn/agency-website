@@ -1,10 +1,9 @@
 "use client";
 
-import { ArrowRight, CalendarDays, Mail, MessageCircle, Phone } from "lucide-react";
+import { CalendarDays, Mail, MessageCircle, Phone } from "lucide-react";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
-import Link from "next/link";
 
-const calendlyUrl = "https://calendly.com/anulenofficial";
+const bookingUrl = "https://calendar.app.google/zK9Z5CjWSfHuzTfD9";
 
 export default function ContactSection() {
   return (
@@ -24,19 +23,11 @@ export default function ContactSection() {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link
-                href="/Contact"
-                className="inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-bold text-black transition hover:scale-[1.03]"
-              >
-                Start a conversation
-                <ArrowRight size={18} />
-              </Link>
-
               <a
-                href={calendlyUrl}
+                href={bookingUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-4 rounded-full border border-white/40 px-7 py-4 text-sm font-bold text-white transition hover:bg-white hover:text-black"
+                className="inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-bold text-black transition hover:scale-[1.03]"
               >
                 Book a call
                 <CalendarDays size={18} />
