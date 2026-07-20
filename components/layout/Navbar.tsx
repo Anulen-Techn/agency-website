@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "../ui/Logo";
 import { services } from "@/data/services";
-import { tools } from "@/data/tools";
 // import ThemeToggle from "@/components/theme/ThemeToggle";
 
 type NavDropdownItem = {
@@ -32,14 +31,7 @@ const navLinks: NavLink[] = [
   },
   // { label: "Case study", href: "/#case-study" },
   // { label: "Resources", href: "/#resources" },
-  {
-    label: "Tools",
-    href: "/tools",
-    dropdown: tools.map((tool) => ({
-      label: tool.title,
-      href: tool.href,
-    })),
-  },
+  { label: "Tools", href: "/tools" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/Contact" },
 ];
